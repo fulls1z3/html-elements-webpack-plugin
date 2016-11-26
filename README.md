@@ -65,7 +65,7 @@ module.exports = {
 
 #### webpack.config.js
 ```JavaScript
-const HtmlElementsPlugin = require('html-elements-plugin');
+const HtmlElementsPlugin = require('html-elements-webpack-plugin');
 
 module.exports = {
   // ...your Webpack config
