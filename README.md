@@ -1,4 +1,5 @@
-# html-elements-webpack-plugin [![npm version](https://badge.fury.io/js/html-elements-webpack-plugin.svg)](http://badge.fury.io/js/html-elements-webpack-plugin) [![npm downloads](https://img.shields.io/npm/dm/html-elements-webpack-plugin.svg)](https://npmjs.org/html-elements-webpack-plugin)
+# html-elements-webpack-plugin
+[![npm version](https://badge.fury.io/js/html-elements-webpack-plugin.svg)](http://badge.fury.io/js/html-elements-webpack-plugin) [![npm downloads](https://img.shields.io/npm/dm/html-elements-webpack-plugin.svg)](https://npmjs.org/html-elements-webpack-plugin)
 
 This repository holds the JavaScript source code and distributable bundle of **`html-elements-webpack-plugin`**, the webpack plugin to append head elements during the creation of `index.html` with the source code is copied from [AngularClass/angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter).
 
@@ -65,14 +66,14 @@ module.exports = {
 
 #### webpack.config.js
 ```JavaScript
-const HtmlElementsPlugin = require('html-elements-webpack-plugin');
+const HtmlElementsWebpackPlugin = require('html-elements-webpack-plugin');
 
 module.exports = {
   // ...your Webpack config
   plugins: [
 	... 
     /*
-     * Plugin: HtmlElementsPlugin
+     * Plugin: HtmlElementsWebpackPlugin
      * Description: Generate html tags based on javascript maps.
      *
      * If a publicPath is set in the webpack output configuration, it will be automatically added to
@@ -84,7 +85,7 @@ module.exports = {
      *
      * Example:
      *  Adding this plugin configuration
-     *  new HtmlElementsPlugin({
+     *  new HtmlElementsWebpackPlugin({
      *    headTags: { ... }
      *  })
      *
@@ -93,13 +94,33 @@ module.exports = {
      *
      * Dependencies: HtmlWebpackPlugin
      */
-    new HtmlElementsPlugin({
+    new HtmlElementsWebpackPlugin({
       headTags: require('./head-config')
     }),
 
 	...
   ]
 };
+```
+
+#### index.html
+```html
+<!DOCTYPE html>
+<head>
+    <base href="/">
+    <meta charset="utf-8" />
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <% if (webpackConfig.htmlElements.headTags) { %>
+    <!-- Configured Head Tags  -->
+    <%= webpackConfig.htmlElements.headTags %>
+    <% } %>
+</head>
+<body>
+    <main>Loading...</main>
+</body>
+</html>
 ```
 
 Awesome! **`html-elements-webpack-plugin`** will now append the head elements specified in `head-config.js` during the creation of `index.html`:
