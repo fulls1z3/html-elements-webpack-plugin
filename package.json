@@ -1,6 +1,6 @@
 {
   "name": "html-elements-webpack-plugin",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Webpack plugin to append head elements during the creation of index.html",
   "keywords": [
     "html",
@@ -21,7 +21,7 @@
     "name": "Burak Tasci",
     "email": "me@fulls1z3.com"
   },
-  "main": "./main/index.js",
+  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/fulls1z3/html-elements-webpack-plugin"
