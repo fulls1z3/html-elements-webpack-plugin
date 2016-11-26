@@ -1,3 +1,5 @@
+#dev stuff
+/.github
 /node_modules
 .gitignore
 .npmignore
