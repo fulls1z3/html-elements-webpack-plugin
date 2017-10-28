@@ -1,7 +1,7 @@
 # html-elements-webpack-plugin
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/fulls1z3/html-elements-webpack-plugin.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/html-elements-webpack-plugin.svg)](http://badge.fury.io/js/html-elements-webpack-plugin) [![npm downloads](https://img.shields.io/npm/dm/html-elements-webpack-plugin.svg)](https://npmjs.org/html-elements-webpack-plugin)
+[![Greenkeeper badge](https://badges.greenkeeper.io/fulls1z3/html-elements-webpack-plugin.svg)](https://greenkeeper.io/)
 
 This repository holds the JavaScript source code and distributable bundle of **`html-elements-webpack-plugin`**, the webpack plugin to append head elements during the creation of `index.html` with the source code is copied from [AngularClass/angular2-webpack-starter](https://github.com/AngularClass/angular2-webpack-starter).
 
